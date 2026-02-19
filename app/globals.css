@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --bg: #F5F2EE;
+  --surface: #FFFFFF;
+  --surface2: #EDE9E3;
+  --border: #E2DDD6;
+  --text: #1C1917;
+  --text2: #78716C;
+  --text3: #A8A29E;
+  --accent: #B45309;
+  --accent-light: #FEF3C7;
+  --accent2: #92400E;
+  --success: #15803D;
+  --success-light: #DCFCE7;
+  --danger: #DC2626;
+  --danger-light: #FEE2E2;
+  --warning: #D97706;
+  --warning-light: #FEF3C7;
+  --info: #1D4ED8;
+  --info-light: #DBEAFE;
+  --purple: #7C3AED;
+  --purple-light: #EDE9FE;
+  --sidebar-bg: #1C1917;
+  --radius: 10px;
+  --shadow: 0 1px 2px rgba(0,0,0,0.05), 0 4px 20px rgba(0,0,0,0.06);
+
+  --background: var(--bg);
+  --foreground: var(--text);
+  --card: var(--surface);
+  --card-foreground: var(--text);
+  --primary: var(--accent);
+  --primary-foreground: #FFFFFF;
+  --secondary: var(--surface2);
+  --secondary-foreground: var(--text2);
+  --muted: var(--surface2);
+  --muted-foreground: var(--text2);
+  --destructive: var(--danger);
+  --destructive-foreground: #FFFFFF;
+  --input: var(--border);
+  --ring: var(--accent);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
