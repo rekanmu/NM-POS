@@ -2,6 +2,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme inline {
+  --font-sans: 'Plus Jakarta Sans', 'Plus Jakarta Sans Fallback', sans-serif;
+  --font-serif: 'Fraunces', 'Fraunces Fallback', serif;
+}
+
 :root {
   --bg: #F5F2EE;
   --surface: #FFFFFF;
@@ -66,4 +71,26 @@ body {
 @keyframes slideUp {
   from { transform: translateY(20px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .app-sidebar {
+    transform: translateX(-100%);
+  }
+  .mobile-menu-btn {
+    display: block !important;
+  }
+  .app-main {
+    margin-left: 0 !important;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .grid-2-col {
+    grid-template-columns: 1fr !important;
+  }
+  .pos-layout {
+    grid-template-columns: 1fr !important;
+    height: auto !important;
+  }
 }
